@@ -1,3 +1,9 @@
+import '@fontsource/noto-serif';
+import 'prism-themes/themes/prism-dracula.css';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+import 'hack-font/build/web/hack.css';
+import './global.css';
+
 import { css } from 'glamor';
 
 import colors from '../../theme/colors';
