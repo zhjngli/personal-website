@@ -71,6 +71,7 @@ module.exports = {
         },
         eslint: {
           patterns: '**/*.{js,jsx,ts,tsx}',
+          ignorePatterns: ['.eslintrc.js', 'gatsby-config.js', 'gatsby-node.js'],
           customOptions: {
             fix: true,
             cache: true
