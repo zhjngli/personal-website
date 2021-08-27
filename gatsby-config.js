@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-netlify-cms', // TODO: revisit cms settings
     'gatsby-plugin-postcss',
+    'gatsby-plugin-glamor',
     'gatsby-plugin-gatsby-cloud',
     'gatsby-plugin-image',
     {
