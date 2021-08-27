@@ -1,8 +1,8 @@
 import { css } from 'glamor';
 
-import colors from '../../../theme/colors';
-import presets from '../../../theme/presets';
-import { scale } from '../../../theme/typography';
+import colors from '../../theme/colors';
+import presets from '../../theme/presets';
+import { scale } from '../../theme/typography';
 
 export default {
   tagsContainer: css({

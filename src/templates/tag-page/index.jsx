@@ -2,8 +2,8 @@ import { graphql, Link } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Layout from '../../../components/layout';
-import Posts from '../../../components/posts';
+import Layout from '../../components/layout';
+import Posts from '../../components/posts';
 
 export default function TagRoute({ data, pageContext }) {
   const posts = data.allMarkdownRemark.edges;

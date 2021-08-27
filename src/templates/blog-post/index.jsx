@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import rehypeReact from 'rehype-react';
 
-import Layout from '../../../components/layout';
+import Layout from '../../components/layout';
 import styles from './style';
 
 const renderAst = new rehypeReact({
@@ -41,7 +41,7 @@ export default function BlogPost({ data }) {
 }
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostBySlug($slug: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
       fields {

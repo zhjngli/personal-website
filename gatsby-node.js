@@ -4,9 +4,6 @@ const path = require('path');
 exports.createPages = ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const blogPostTemplate = path.resolve(`src/pages/template/blog-post/index.jsx`);
-  const tagPageTemplate = path.resolve(`src/pages/template/tag-page/index.jsx`);
-
   return (result = graphql(`
     {
       allMarkdownRemark {
@@ -32,7 +29,7 @@ exports.createPages = ({ actions, graphql, reporter }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
-        component: blogPostTemplate,
+        component: path.resolve(`src/templates/blog-post/index.jsx`),
         context: {
           slug: node.fields.slug
         }
@@ -51,7 +48,7 @@ exports.createPages = ({ actions, graphql, reporter }) => {
       const tagPath = `/tags/${_.kebabCase(tag)}/`;
       createPage({
         path: tagPath,
-        component: tagPageTemplate,
+        component: path.resolve(`src/templates/tag-page/index.jsx`),
         context: {
           tag
         }
