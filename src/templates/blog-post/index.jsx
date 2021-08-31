@@ -10,7 +10,7 @@ const renderAst = new rehypeReact({
   createElement: React.createElement
 }).Compiler;
 
-export default function BlogPost({ data }) {
+export default function BlogPost({ data, pageContext }) {
   const { markdownRemark: post } = data;
   let tags;
   let tagsSection;
@@ -36,12 +36,15 @@ export default function BlogPost({ data }) {
       <p {...styles.tagsContainer}>&middot; {tagsSection}</p>
       <hr />
       {renderAst(post.htmlAst)}
+      <hr />
+      {pageContext.next && <Link to={pageContext.next.fields.slug}>{pageContext.next.frontmatter.title}</Link>}
+      {pageContext.prev && <Link to={pageContext.prev.fields.slug}>{pageContext.prev.frontmatter.title}</Link>}
     </Layout>
   );
 }
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
       fields {

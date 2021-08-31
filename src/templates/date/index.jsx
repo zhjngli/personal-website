@@ -1,35 +1,32 @@
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Layout from '../../components/layout';
 import Posts from '../../components/posts';
 
-export default function TagPage({ data, pageContext }) {
+export default function DatePage({ data, pageContext }) {
   const posts = data.allMarkdownRemark.edges;
   const totalCount = data.allMarkdownRemark.totalCount;
 
   return (
     <Layout>
-      <Helmet title={`${pageContext.tag} | zli`} />
+      <Helmet title={`${pageContext.date} | zli`} />
       <h1>
         {totalCount}
         {` `}
-        post{totalCount != 1 && 's'} tagged with “{pageContext.tag}”
+        post{totalCount != 1 && 's'} from {pageContext.date}
       </h1>
       <Posts posts={posts} />
-      <p>
-        Or check out <Link to="/tags">all tags</Link>.
-      </p>
     </Layout>
   );
 }
 
 export const pageQuery = graphql`
-  query ($tag: String!) {
+  query ($before: Date!, $after: Date!) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { date: { lte: $before, gte: $after } } }
     ) {
       totalCount
       edges {
