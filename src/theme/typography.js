@@ -116,20 +116,6 @@ const options = {
         paddingLeft: rhythm(2 / 4),
         borderLeft: `${rhythm(1 / 5)} solid ${colors.codeHighlightLeftBorder}`
       }
-      // TODO: revisit Increase base font-size for phablet and desktop.
-      // [presets.Phablet]: {
-      //   html: {
-      //     fontSize: `${(18 / 16) * 100}%`
-      //   },
-      //   h1: {
-      //     ...scale(7 / 5)
-      //   }
-      // },
-      // [presets.Desktop]: {
-      //   html: {
-      //     fontSize: `${(20 / 16) * 100}%`
-      //   }
-      // }
     };
   }
 };
