@@ -20,7 +20,7 @@ export default function BlogPost({ data, pageContext }) {
       const divider = i < tagsArray.length - 1 && <span>{`, `}</span>;
       return (
         <span key={tag}>
-          <Link to={tag} {...styles.tagLink}>
+          <Link to={tag} {...styles.minorLink}>
             {post.frontmatter.tags[i]}
           </Link>
           {divider}
@@ -37,8 +37,18 @@ export default function BlogPost({ data, pageContext }) {
       <hr />
       {renderAst(post.htmlAst)}
       <hr />
-      {pageContext.next && <Link to={pageContext.next.fields.slug}>{pageContext.next.frontmatter.title}</Link>}
-      {pageContext.prev && <Link to={pageContext.prev.fields.slug}>{pageContext.prev.frontmatter.title}</Link>}
+      <div {...styles.postNavigation}>
+        {pageContext.prev && (
+          <Link to={pageContext.prev.fields.slug} {...styles.minorLink} {...styles.prevPost}>
+            &#8592; {pageContext.prev.frontmatter.title}
+          </Link>
+        )}
+        {pageContext.next && (
+          <Link to={pageContext.next.fields.slug} {...styles.minorLink} {...styles.nextPost}>
+            {pageContext.next.frontmatter.title} &#8594;
+          </Link>
+        )}
+      </div>
     </Layout>
   );
 }

@@ -35,10 +35,8 @@ const getMonth = (month) => {
 exports.createPages = ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const filterDraft = process.env.NODE_ENV === 'development' ? '' : '(filter: { frontmatter: { draft: { ne: true } } })';
-
   return (result = graphql(`{
-    allMarkdownRemark ${filterDraft} {
+    allMarkdownRemark (sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           fields {

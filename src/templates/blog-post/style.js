@@ -1,7 +1,6 @@
 import { css } from 'glamor';
 
 import colors from '../../theme/colors';
-import presets from '../../theme/presets';
 import { scale } from '../../theme/typography';
 
 export default {
@@ -14,7 +13,7 @@ export default {
     textAlign: `left`,
     color: colors.light
   }),
-  tagLink: css({
+  minorLink: css({
     color: colors.light,
     borderColor: colors.light,
     ':hover': {
@@ -22,12 +21,15 @@ export default {
       borderColor: colors.linkHover
     }
   }),
-  date: css({
-    color: colors.light,
-    display: `block`,
-    [presets.Tablet]: {
-      float: `right`,
-      marginLeft: `1rem`
-    }
+  postNavigation: css({
+    ...scale(-2 / 5)
+  }),
+  nextPost: css({
+    float: `right`,
+    marginLeft: `1rem`
+  }),
+  prevPost: css({
+    float: `left`,
+    marginRight: `1rem`
   })
 };
