@@ -75,7 +75,11 @@ module.exports = {
           ignorePatterns: ['.eslintrc.js', 'gatsby-config.js', 'gatsby-node.js'],
           customOptions: {
             fix: true,
-            cache: true
+            cache: true,
+            env: {
+              browser: true,
+              node: true
+            }
           }
         }
       }

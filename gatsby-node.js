@@ -35,8 +35,10 @@ const getMonth = (month) => {
 exports.createPages = ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
+  const filterDraft = process.env.NODE_ENV === 'development' ? '' : '(filter: { frontmatter: { test: { ne: true } } })';
+
   return (result = graphql(`{
-    allMarkdownRemark {
+    allMarkdownRemark ${filterDraft} {
       edges {
         node {
           fields {
