@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import FadeIn from 'react-fade-in';
 
 import styles from './style';
 
@@ -20,7 +21,9 @@ class Layout extends React.Component {
             </Link>
           </nav>
         </header>
-        <main {...styles.mainContainer}>{this.props.children}</main>
+        <main {...styles.mainContainer}>
+          <FadeIn>{this.props.children}</FadeIn>
+        </main>
         <footer {...styles.footerContainer}>&copy; 2021.</footer>
       </div>
     );
