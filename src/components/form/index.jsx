@@ -4,13 +4,21 @@ import NetlifyForm from 'react-netlify-form';
 import styles from './style';
 
 /*
-Required in netlify snippet injection:
+In netlify snippet injection:
+I tested without this in the snippet injection, and the form still seemed to work properly.
+According to https://www.npmjs.com/package/react-netlify-form, https://docs.netlify.com/forms/setup/
+this needs to be server side rendered, but I haven't found that to be the case.
+I left it in anyway for the honeypot.
+
+Another option is to add the hidden form to the default layout, to avoid having to remember handling
+the snippet injection, but as this seems to work fine, I neglected to test this option.
+
 <form name="contact" netlify netlify-honeypot="say-hi" hidden>
-    <input type="text" name="first_name" />
-    <input type="text" name="last_name" />
-    <input type="email" name="email" />
-    <input type="text" name="subject" />
-    <textarea name="message"></textarea>
+  <input type="text" name="first_name" />
+  <input type="text" name="last_name" />
+  <input type="email" name="email" />
+  <input type="text" name="subject" />
+  <textarea name="message"></textarea>
 </form>
 */
 export default function Form() {
