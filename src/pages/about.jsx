@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
@@ -9,7 +8,7 @@ export default function About() {
     <Layout>
       <Helmet title={`about`} />
       <p>
-        Hey, I'm Zhijiang! I believe that we're made with a drive to create. As a{' '}
+        Hey, I&apos;m Zhijiang! I believe that we&apos;re made with a drive to create. As a{' '}
         <a href="https://www.linkedin.com/in/zhjngli" target="_blank" rel="noopener noreferrer">
           software engineer
         </a>
