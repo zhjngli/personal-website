@@ -21,7 +21,7 @@ const options = {
       a: {
         color: colors.body,
         textDecoration: `none`,
-        borderBottom: `2px solid ${colors.body}`
+        borderBottom: `1px solid ${colors.body}`
       },
       'a:hover': {
         borderBottom: `2px solid ${colors.linkHover}`
