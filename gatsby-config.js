@@ -82,6 +82,7 @@ module.exports = {
       },
       __key: 'posts'
     },
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-prettier-eslint',
       options: {
