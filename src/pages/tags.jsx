@@ -12,7 +12,6 @@ class TagsPageRoute extends React.Component {
     return (
       <Layout>
         <Helmet title={`tags | zli`} />
-        <h1>Tags</h1>
         <ul>
           {allTags.map((tag) => (
             <li key={tag.fieldValue}>
@@ -31,11 +30,6 @@ export default TagsPageRoute;
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark {
       group(field: frontmatter___tags) {
         fieldValue

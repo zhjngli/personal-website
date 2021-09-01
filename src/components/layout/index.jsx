@@ -16,6 +16,9 @@ class Layout extends React.Component {
             <Link to={'/about'} {...styles.navLink} activeClassName={styles.activeNavLink}>
               about
             </Link>
+            <Link to={'/contact'} {...styles.navLink} activeClassName={styles.activeNavLink}>
+              contact
+            </Link>
             <Link to={'/tags'} {...styles.navLink} activeClassName={styles.activeNavLink}>
               tags
             </Link>

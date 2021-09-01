@@ -1,4 +1,5 @@
 import '@fontsource/noto-serif';
+import '@fontsource/hind-madurai';
 import 'prism-themes/themes/prism-dracula.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import 'hack-font/build/web/hack.css';
