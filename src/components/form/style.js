@@ -19,7 +19,7 @@ export default {
   formFieldsContainer: css({
     margin: `${rhythm(3 / 4)} 0`,
     '& label': {
-      ...scale(-3 / 5),
+      ...scale(-2 / 5),
       display: 'inline-block',
       margin: `${rhythm(1 / 4)} 0`,
       lineHeight: '1rem'
@@ -41,20 +41,24 @@ export default {
       }
     ]
   }),
-  nameContainer: css({
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  }),
+  nameContainer: css([
+    formStyle,
+    {
+      ...scale(-4 / 5),
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between'
+    }
+  ]),
   firstNameContainer: css({
     marginRight: rhythm(1)
   }),
   submitButton: css([
     formStyle,
     {
+      ...scale(2 / 5),
       fontVariant: 'small-caps',
       fontWeight: '500',
-      fontSize: '18px',
       letterSpacing: '0.04em',
       cursor: 'pointer',
 
