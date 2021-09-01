@@ -1,0 +1,10 @@
+{
+  "timestamp": 1630482756911,
+  "hash": "a22fc6e033a851d71951a43d90c872e0",
+  "assets": {
+    "/404.html": {
+      "/static/noto-serif-latin-ext-400-normal-a29a136069074fa30e9ed4f13e6538f7.woff2": true,
+      "/static/noto-serif-latin-400-normal-5d8da75aca3a31f37c5f72b734ca8c49.woff2": true
+    }
+  }
+}
