@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 export default function About() {
   return (
     <Layout>
-      <Helmet title={`about | zli`} />
+      <Helmet title={`about`} />
       <div>
         <h1>About me!</h1>
       </div>

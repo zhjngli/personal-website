@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import FadeIn from 'react-fade-in';
+import { Helmet } from 'react-helmet';
 
 import styles from './style';
 
@@ -8,6 +9,10 @@ class Layout extends React.Component {
   render() {
     return (
       <div {...styles.container}>
+        <Helmet titleTemplate="%s | zli" defaultTitle="zli">
+          <html lang="en" />
+          <meta name="description" content="Zhijiang Li's tech musings and notes" />
+        </Helmet>
         <header {...styles.headerContainer}>
           <nav>
             <Link to={'/'} {...styles.title} activeClassName={styles.activeNavLink}>

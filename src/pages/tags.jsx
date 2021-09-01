@@ -11,7 +11,7 @@ class TagsPageRoute extends React.Component {
 
     return (
       <Layout>
-        <Helmet title={`tags | zli`} />
+        <Helmet title={`tags`} />
         <ul>
           {allTags.map((tag) => (
             <li key={tag.fieldValue}>

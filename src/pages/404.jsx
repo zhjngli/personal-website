@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 export default function NotFoundPage() {
   return (
     <Layout>
-      <Helmet title={`404 | zli`} />
+      <Helmet title={`404`} />
       <p>
         Sorry, content not found! Go to <Link to="/">home</Link>.
       </p>
