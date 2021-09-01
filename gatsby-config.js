@@ -20,8 +20,18 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/master-512.png'
-      }
+        name: `zli`,
+        short_name: `zli`,
+        description: 'Tech musings and notes.',
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
+        display: `standalone`,
+        icon: 'src/images/master-512.png',
+        icon_options: {
+          purpose: `any maskable`
+        }
+      },
     },
     {
       resolve: 'gatsby-transformer-remark',
