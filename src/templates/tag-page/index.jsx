@@ -15,7 +15,7 @@ export default function TagPage({ data, pageContext }) {
       <h1>
         {totalCount}
         {` `}
-        post{totalCount != 1 && 's'} tagged with “{pageContext.tag}”
+        post{totalCount != 1 && 's'} in “{pageContext.tag}”
       </h1>
       <Posts posts={posts} />
       <p>
