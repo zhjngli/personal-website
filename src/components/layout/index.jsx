@@ -41,8 +41,8 @@ export default function Layout({ children }) {
       </header>
       <main {...styles.mainContainer}>
         {/* <FadeIn> */}
-          {children}
-          {/* </FadeIn> */}
+        {children}
+        {/* </FadeIn> */}
       </main>
       <footer {...styles.footerContainer}>&copy; 2021.</footer>
     </div>
