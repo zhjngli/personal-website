@@ -1,7 +1,12 @@
+const url = 'https://zhjngli.com'; // for now. update when actual url is purchased
+const title = 'zli';
+const description = "Zhijiang Li's tech musings and notes";
+
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://zhjngli.com', // for now. update when actual url is purchased
-    title: 'zli',
+    siteUrl: url,
+    title: title,
+    description: description,
     author: 'Zhijiang Li'
   },
   plugins: [
@@ -20,10 +25,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `zli`,
+        name: title,
         short_name: `zli`,
-        description: 'Tech musings and notes.',
-        start_url: `/`,
+        description: description,
+        start_url: url,
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `standalone`,

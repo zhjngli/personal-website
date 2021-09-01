@@ -31,7 +31,7 @@ export default function BlogPost({ data, pageContext }) {
   }
   return (
     <Layout>
-      <Helmet title={`${post.frontmatter.title} | zli`} />
+      <Helmet title={`${post.frontmatter.title}`} />
       <h1>{post.frontmatter.title}</h1>
       <p {...styles.tagsContainer}>&middot; {tagsSection}</p>
       <hr />

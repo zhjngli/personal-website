@@ -11,7 +11,7 @@ export default function TagPage({ data, pageContext }) {
 
   return (
     <Layout>
-      <Helmet title={`${pageContext.tag} | zli`} />
+      <Helmet title={`${pageContext.tag}`} />
       <h1>
         {totalCount}
         {` `}

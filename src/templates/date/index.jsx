@@ -11,7 +11,7 @@ export default function DatePage({ data, pageContext }) {
 
   return (
     <Layout>
-      <Helmet title={`${pageContext.date} | zli`} />
+      <Helmet title={`${pageContext.date}`} />
       <h1>
         {totalCount}
         {` `}
