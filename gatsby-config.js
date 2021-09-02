@@ -113,11 +113,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-no-javascript-utils',
       options: {
-        noScript: true,
+        noScript: false,
         noSourcemaps: true,
         removeGeneratorTag: true,
         removeReactHelmetAttrs: true,
-        noInlineStyles: true,
+        noInlineStyles: true, // doesn't make big difference since the site uses css-in-js
         removeGatsbyAnnouncer: false, // doesn't seem to work when true
       }
     }
