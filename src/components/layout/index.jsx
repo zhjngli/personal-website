@@ -1,6 +1,5 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
-import FadeIn from 'react-fade-in';
 import { Helmet } from 'react-helmet';
 
 import styles from './style';
@@ -39,9 +38,7 @@ export default function Layout({ children }) {
           </Link>
         </nav>
       </header>
-      <main {...styles.mainContainer}>
-        <FadeIn>{children}</FadeIn>
-      </main>
+      <main {...styles.mainContainer}>{children}</main>
       <footer {...styles.footerContainer}>&copy; 2021.</footer>
     </div>
   );
