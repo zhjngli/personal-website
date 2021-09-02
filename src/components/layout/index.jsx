@@ -18,31 +18,31 @@ export default function Layout({ children }) {
   `);
 
   return (
-    <div className={styles.container}>
+    <div {...styles.container}>
       <Helmet titleTemplate={`%s | ${data.site.siteMetadata.title}`} defaultTitle={`${data.site.siteMetadata.title}`}>
         <html lang="en" />
         <meta name="description" content={`${data.site.siteMetadata.description}`} />
       </Helmet>
-      <header className={styles.headerContainer}>
+      <header {...styles.headerContainer}>
         <nav>
-          <Link to={'/'} className={styles.title} activeClassName={styles.activeNavLink}>
+          <Link to={'/'} {...styles.title} activeClassName={styles.activeNavLink}>
             ƶli
           </Link>
-          <Link to={'/about'} className={styles.navLink} activeClassName={styles.activeNavLink}>
+          <Link to={'/about'} {...styles.navLink} activeClassName={styles.activeNavLink}>
             about
           </Link>
-          <Link to={'/contact'} className={styles.navLink} activeClassName={styles.activeNavLink}>
+          <Link to={'/contact'} {...styles.navLink} activeClassName={styles.activeNavLink}>
             contact
           </Link>
-          <Link to={'/tags'} className={styles.navLink} activeClassName={styles.activeNavLink}>
+          <Link to={'/tags'} {...styles.navLink} activeClassName={styles.activeNavLink}>
             tags
           </Link>
         </nav>
       </header>
-      <main className={styles.mainContainer}>
+      <main {...styles.mainContainer}>
         <FadeIn>{children}</FadeIn>
       </main>
-      <footer className={styles.footerContainer}>&copy; 2021.</footer>
+      <footer {...styles.footerContainer}>&copy; 2021.</footer>
     </div>
   );
 }
