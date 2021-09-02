@@ -18,6 +18,11 @@ const options = {
   // eslint-disable-next-line no-unused-vars
   overrideStyles: ({ rhythm, scale }, options) => {
     return {
+      html: {
+        'font-family': `Noto Serif, serif`,
+        '-ms-text-size-adjust': '100%',
+        '-webkit-text-size-adjust': '100%'
+      },
       a: {
         color: colors.body,
         textDecoration: `none`,
