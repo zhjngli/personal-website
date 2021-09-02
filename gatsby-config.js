@@ -110,6 +110,12 @@ module.exports = {
         }
       }
     },
-    'gatsby-plugin-no-javascript'
+    {
+      resolve:
+      'gatsby-plugin-no-javascript',
+      options: {
+        excludeFiles: '.*\.js'
+      }
+    }
   ]
 };

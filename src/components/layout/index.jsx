@@ -38,9 +38,7 @@ export default function Layout({ children }) {
           </Link>
         </nav>
       </header>
-      <main {...styles.mainContainer}>
-        {children}
-      </main>
+      <main {...styles.mainContainer}>{children}</main>
       <footer {...styles.footerContainer}>&copy; 2021.</footer>
     </div>
   );
