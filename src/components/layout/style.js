@@ -23,7 +23,7 @@ export default {
   }),
   title: css({
     color: colors.header,
-    // fontSize: `110%`,
+    fontSize: `110%`,
     fontWeight: 700,
     letterSpacing: '0.07em',
     textDecoration: 'none',
