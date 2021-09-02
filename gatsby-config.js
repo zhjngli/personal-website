@@ -111,10 +111,14 @@ module.exports = {
       }
     },
     {
-      resolve:
-      'gatsby-plugin-no-javascript',
+      resolve: 'gatsby-plugin-no-javascript-utils',
       options: {
-        excludeFiles: '.*\.js'
+        noScript: true,
+        noSourcemaps: true,
+        removeGeneratorTag: true,
+        removeReactHelmetAttrs: true,
+        noInlineStyles: true,
+        removeGatsbyAnnouncer: false, // doesn't seem to work when true
       }
     }
   ]
