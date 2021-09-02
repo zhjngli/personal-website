@@ -14,7 +14,7 @@ export default {
   date: css({
     color: colors.light,
     display: `block`,
-    [presets.Tablet]: {
+    [presets.Mobile]: {
       float: `right`,
       marginLeft: `1rem`
     }

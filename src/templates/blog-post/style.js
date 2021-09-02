@@ -1,17 +1,19 @@
 import { css } from 'glamor';
 
 import colors from '../../theme/colors';
-import { scale } from '../../theme/typography';
+import { rhythm, scale } from '../../theme/typography';
 
 export default {
-  tagsContainer: css({
-    ...scale(-2 / 5),
-    display: `block`
+  title: css({
+    marginBottom: rhythm(1 / 4)
   }),
-  tagsSection: css({
+  infoSection: css({
+    ...scale(-1 / 4),
+    display: `block`,
     fontStyle: `normal`,
     textAlign: `left`,
-    color: colors.light
+    color: colors.light,
+    marginBottom: rhythm(1 / 4)
   }),
   minorLink: css({
     color: colors.light,
@@ -22,7 +24,7 @@ export default {
     }
   }),
   postNavigation: css({
-    ...scale(-2 / 5)
+    ...scale(-1 / 4)
   }),
   nextPost: css({
     float: `right`,
