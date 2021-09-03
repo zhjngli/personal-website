@@ -1,4 +1,4 @@
-const url = 'https://zhjngli.com'; // for now. update when actual url is purchased
+const url = 'https://zhjngli.netlify.app'; // for now. update when actual url is purchased
 const title = 'zli';
 const description = "Zhijiang's tech musings and notes";
 
