@@ -23,7 +23,7 @@ export default function SEO({ path, title, description, image }) {
     url: `${md.siteUrl}${path || ''}`
   };
   return (
-    <Helmet title={title}>
+    <Helmet title={title} defer={false}>
       <link rel="canonical" href={seo.url} />
       <meta name="description" content={`${seo.description}`} />
 

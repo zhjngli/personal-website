@@ -19,7 +19,7 @@ export default function Layout({ children }) {
   const md = data.site.siteMetadata;
   return (
     <div {...styles.container}>
-      <Helmet titleTemplate={`%s | ${md.title}`} defaultTitle={md.title}>
+      <Helmet titleTemplate={`%s | ${md.title}`} defaultTitle={md.title} defer={false}>
         <html lang="en" />
         <meta name="description" content={`${md.description}`} />
       </Helmet>
