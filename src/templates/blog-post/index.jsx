@@ -13,27 +13,35 @@ const renderAst = new rehypeReact({
 export default function BlogPost({ data, pageContext }) {
   const { markdownRemark: post } = data;
   let tags;
-  let tagsSection;
   if (post.fields.tagSlugs) {
     const tagsArray = post.fields.tagSlugs;
     tags = tagsArray.map((tag, i) => {
       const divider = i < tagsArray.length - 1 && <span>{`, `}</span>;
       return (
-        <span key={tag}>
-          <Link to={tag} {...styles.minorLink}>
-            {post.frontmatter.tags[i]}
-          </Link>
-          {divider}
-        </span>
+        <>
+          {' '}
+          &middot; in:{' '}
+          <span key={tag}>
+            <Link to={tag} {...styles.minorLink}>
+              {post.frontmatter.tags[i]}
+            </Link>
+            {divider}
+          </span>
+        </>
       );
     });
-    tagsSection = <span {...styles.tagsSection}>in: {tags}</span>;
   }
+  const infoSection = (
+    <span {...styles.infoSection}>
+      {post.frontmatter.date}
+      {tags}
+    </span>
+  );
   return (
     <Layout>
       <Helmet title={`${post.frontmatter.title}`} />
-      <h1>{post.frontmatter.title}</h1>
-      <p {...styles.tagsContainer}>&middot; {tagsSection}</p>
+      <h1 {...styles.title}>{post.frontmatter.title}</h1>
+      {infoSection}
       <hr />
       {renderAst(post.htmlAst)}
       <hr />

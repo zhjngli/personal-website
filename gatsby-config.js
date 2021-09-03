@@ -108,6 +108,17 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      resolve: 'gatsby-plugin-no-javascript-utils',
+      options: {
+        noScript: false, // kept for better routing purposes
+        noSourcemaps: true,
+        removeGeneratorTag: true,
+        removeReactHelmetAttrs: true, // doesn't work when noScript is false
+        noInlineStyles: true, // doesn't make big difference since the site uses css-in-js
+        removeGatsbyAnnouncer: false, // doesn't seem to work when true
+      }
     }
   ]
 };
