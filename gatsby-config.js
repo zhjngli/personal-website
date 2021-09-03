@@ -11,7 +11,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-netlify-cms', // TODO: revisit cms settings
-    'gatsby-plugin-preact',
     'gatsby-plugin-glamor',
     'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-gatsby-cloud',
