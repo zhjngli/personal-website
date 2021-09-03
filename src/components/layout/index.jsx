@@ -1,13 +1,11 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-import SEO from '../seo';
 import styles from './style';
 
 export default function Layout({ children }) {
   return (
     <div {...styles.container}>
-      <SEO />
       <header {...styles.headerContainer}>
         <nav>
           <Link to={'/'} {...styles.title} activeClassName={styles.activeNavLink}>
