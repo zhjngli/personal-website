@@ -1,9 +1,9 @@
 import { graphql, Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 class TagsPageRoute extends React.Component {
   render() {
@@ -11,7 +11,7 @@ class TagsPageRoute extends React.Component {
 
     return (
       <Layout>
-        <Helmet title={`tags`} />
+        <SEO title="tags" path="/tags" />
         <ul>
           {allTags.map((tag) => (
             <li key={tag.fieldValue}>

@@ -1,13 +1,13 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 export default function NotFoundPage() {
   return (
     <Layout>
-      <Helmet title={`404`} />
+      <SEO title="404" />
       <p>
         Sorry, content not found! Go to <Link to="/">home</Link>.
       </p>

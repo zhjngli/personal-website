@@ -1,6 +1,6 @@
 const url = 'https://zhjngli.com'; // for now. update when actual url is purchased
 const title = 'zli';
-const description = "Zhijiang Li's tech musings and notes";
+const description = "Zhijiang's tech musings and notes";
 
 module.exports = {
   siteMetadata: {
@@ -81,7 +81,7 @@ module.exports = {
       },
       __key: 'posts'
     },
-    'gatsby-plugin-offline',
+    'gatsby-plugin-offline', // after manifest plugin
     {
       resolve: 'gatsby-plugin-prettier-eslint',
       options: {

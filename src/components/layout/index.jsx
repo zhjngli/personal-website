@@ -1,27 +1,13 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
+import SEO from '../seo';
 import styles from './style';
 
 export default function Layout({ children }) {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-    }
-  `);
-
   return (
     <div {...styles.container}>
-      <Helmet titleTemplate={`%s | ${data.site.siteMetadata.title}`} defaultTitle={`${data.site.siteMetadata.title}`}>
-        <html lang="en" />
-        <meta name="description" content={`${data.site.siteMetadata.description}`} />
-      </Helmet>
+      <SEO />
       <header {...styles.headerContainer}>
         <nav>
           <Link to={'/'} {...styles.title} activeClassName={styles.activeNavLink}>

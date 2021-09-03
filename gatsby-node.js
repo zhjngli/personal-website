@@ -99,6 +99,7 @@ exports.createPages = ({ actions, graphql, reporter }) => {
         path: tagPath,
         component: path.resolve(`src/templates/tag-page/index.jsx`),
         context: {
+          slug: tagPath,
           tag: tag
         }
       });
@@ -135,6 +136,7 @@ exports.createPages = ({ actions, graphql, reporter }) => {
               path: `/${y}/${m}/${d}`,
               component: path.resolve(`src/templates/date/index.jsx`),
               context: {
+                slug: `/${y}/${m}/${d}`,
                 before: `${y}-${m}-${d}`,
                 after: `${y}-${m}-${d}`,
                 date: `${getMonth(m)} ${d}, ${y}`
@@ -145,6 +147,7 @@ exports.createPages = ({ actions, graphql, reporter }) => {
             path: `/${y}/${m}`,
             component: path.resolve(`src/templates/date/index.jsx`),
             context: {
+              slug: `/${y}/${m}`,
               before: `${y}-${m}-31`,
               after: `${y}-${m}-01`,
               date: `${getMonth(m)} ${y}`
@@ -155,6 +158,7 @@ exports.createPages = ({ actions, graphql, reporter }) => {
           path: `/${y}`,
           component: path.resolve(`src/templates/date/index.jsx`),
           context: {
+            slug: `/${y}`,
             before: `${y}-12-31`,
             after: `${y}-01-01`,
             date: y

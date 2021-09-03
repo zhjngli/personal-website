@@ -1,9 +1,9 @@
 import { graphql, Link } from 'gatsby';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import rehypeReact from 'rehype-react';
 
 import Layout from '../../components/layout';
+import SEO from '../../components/seo';
 import styles from './style';
 
 const renderAst = new rehypeReact({
@@ -39,7 +39,7 @@ export default function BlogPost({ data, pageContext }) {
   );
   return (
     <Layout>
-      <Helmet title={`${post.frontmatter.title}`} />
+      <SEO title={post.frontmatter.title} path={post.fields.slug} />
       <h1 {...styles.title}>{post.frontmatter.title}</h1>
       {infoSection}
       <hr />
@@ -67,6 +67,7 @@ export const pageQuery = graphql`
       htmlAst
       fields {
         tagSlugs
+        slug
       }
       frontmatter {
         title

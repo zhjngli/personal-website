@@ -1,9 +1,9 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
 import Layout from '../../components/layout';
 import Posts from '../../components/posts';
+import SEO from '../../components/seo';
 
 export default function DatePage({ data, pageContext }) {
   const posts = data.allMarkdownRemark.edges;
@@ -11,7 +11,7 @@ export default function DatePage({ data, pageContext }) {
 
   return (
     <Layout>
-      <Helmet title={`${pageContext.date}`} />
+      <SEO title={pageContext.date} path={pageContext.slug} />
       <h1>
         {totalCount}
         {` `}

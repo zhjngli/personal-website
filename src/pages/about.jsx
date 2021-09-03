@@ -1,12 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 export default function About() {
   return (
     <Layout>
-      <Helmet title={`about`} />
+      <SEO title="about" path="/about" />
       <p>
         Hey, I&apos;m Zhijiang! I believe that we&apos;re made to create. As a{' '}
         <a href="https://www.linkedin.com/in/zhjngli" target="_blank" rel="noopener noreferrer">
