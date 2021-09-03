@@ -16,14 +16,14 @@ export default function SEO({ path, title, description, image }) {
   `);
   const md = data.site.siteMetadata;
   const seo = {
+    // seo title different from browser title
     title: `${md.title}${title ? ` | ${title}` : ''}`,
     description: description || md.description,
     image: `${md.siteUrl}${image}`,
     url: `${md.siteUrl}${path || ''}`
   };
   return (
-    <Helmet titleTemplate={`%s | ${md.title}`} defaultTitle={md.title} title={title}>
-      <html lang="en" />
+    <Helmet title={title}>
       <link rel="canonical" href={seo.url} />
       <meta name="description" content={`${seo.description}`} />
 
