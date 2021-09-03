@@ -29,7 +29,7 @@ module.exports = {
         name: title,
         short_name: `zli`,
         description: description,
-        start_url: url,
+        start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `standalone`,
