@@ -29,7 +29,7 @@ module.exports = {
         name: title,
         short_name: `zli`,
         description: description,
-        start_url: url,
+        start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `standalone`,
@@ -114,7 +114,7 @@ module.exports = {
         noScript: false, // kept for better routing purposes
         noSourcemaps: true,
         removeGeneratorTag: true,
-        removeReactHelmetAttrs: true, // doesn't work when noScript is false
+        removeReactHelmetAttrs: false, // 'true' makes meta tags finnicky as there can be duplicates
         noInlineStyles: true, // doesn't make big difference since the site uses css-in-js
         removeGatsbyAnnouncer: false, // doesn't seem to work when true
       }
