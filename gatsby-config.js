@@ -11,6 +11,20 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-netlify-cms', // TODO: revisit cms settings
+    {
+      resolve: 'gatsby-plugin-netlify-headers',
+      options: {
+        headers: {
+          "/*": [
+            'Referrer-Policy: strict-origin-when-cross-origin',
+            'X-Content-Type-Options = nosniff',
+            'X-Frame-Options: DENY',
+            'X-XSS-Protection: 1; mode=block',
+            "Content-Security-Policy: frame-ancestors 'none';",
+          ]
+        }
+      }
+    },
     'gatsby-plugin-glamor',
     'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-gatsby-cloud',
