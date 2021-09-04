@@ -11,20 +11,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-netlify-cms', // TODO: revisit cms settings
-    {
-      resolve: 'gatsby-plugin-netlify-headers',
-      options: {
-        headers: {
-          "/*": [
-            'Referrer-Policy: strict-origin-when-cross-origin',
-            'X-Content-Type-Options = nosniff',
-            'X-Frame-Options: DENY',
-            'X-XSS-Protection: 1; mode=block',
-            "Content-Security-Policy: frame-ancestors 'none';",
-          ]
-        }
-      }
-    },
     'gatsby-plugin-glamor',
     'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-gatsby-cloud',
@@ -131,6 +117,20 @@ module.exports = {
         removeReactHelmetAttrs: false, // 'true' makes meta tags finnicky as there can be duplicates
         noInlineStyles: true, // doesn't make big difference since the site uses css-in-js
         removeGatsbyAnnouncer: false, // doesn't seem to work when true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-headers',
+      options: {
+        headers: {
+          "/*": [
+            'Referrer-Policy: strict-origin-when-cross-origin',
+            'X-Content-Type-Options = nosniff',
+            'X-Frame-Options: DENY',
+            'X-XSS-Protection: 1; mode=block',
+            "Content-Security-Policy: frame-ancestors 'none';",
+          ]
+        }
       }
     }
   ]
