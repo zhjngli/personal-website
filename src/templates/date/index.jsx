@@ -11,7 +11,7 @@ export default function DatePage({ data, pageContext }) {
 
   return (
     <Layout>
-      <SEO title={`posts from ${pageContext.date}`} path={pageContext.slug} />
+      <SEO title={pageContext.date} path={pageContext.slug} />
       <h1>
         {totalCount}
         {` `}

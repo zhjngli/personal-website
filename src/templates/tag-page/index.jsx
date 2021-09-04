@@ -11,7 +11,7 @@ export default function TagPage({ data, pageContext }) {
 
   return (
     <Layout>
-      <SEO title={`tagged '${pageContext.tag}'`} path={pageContext.slug} />
+      <SEO title={pageContext.tag} path={pageContext.slug} />
       <h1>
         {totalCount}
         {` `}
