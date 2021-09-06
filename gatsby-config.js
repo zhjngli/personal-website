@@ -10,7 +10,7 @@ module.exports = {
     author: 'Zhijiang Li'
   },
   plugins: [
-    'gatsby-plugin-netlify-cms', // TODO: revisit cms settings
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-glamor',
     'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-gatsby-cloud',
@@ -68,7 +68,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/'
+        path: `${__dirname}/src/images/`
       },
       __key: 'images'
     },
@@ -76,7 +76,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
-        path: `${__dirname}/src/posts/`
+        path: `${__dirname}/posts/`
       },
       __key: 'posts'
     },
