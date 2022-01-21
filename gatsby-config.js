@@ -12,7 +12,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-glamor',
-    'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-gatsby-cloud',
     'gatsby-plugin-image',
     {
