@@ -3,7 +3,7 @@ title: Rembrandt is in the Wind
 slug: reflecting on Rembrandt is in the Wind, by Russ Ramsey, Makoto Fujimura
 tags:
   - book
-date: 2022-05-20T21:07:52.090Z
+date: 2022-05-21T07:26:20.868Z
 ---
 As I have been more and more drawn towards photography, I've also been grappling with questions of art. What draws us to beauty? What *is* beauty? Why does art so often invoke such powerful emotions? More personally, what am I saying through my photography? Do I have to be making any claim anyway?
 
