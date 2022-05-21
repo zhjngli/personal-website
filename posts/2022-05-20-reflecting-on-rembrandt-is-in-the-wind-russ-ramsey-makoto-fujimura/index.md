@@ -1,6 +1,6 @@
 ---
-title: Rembrandt is in the Wind
-slug: reflecting on Rembrandt is in the Wind, by Russ Ramsey, Makoto Fujimura
+title: Reflecting on Rembrandt is in the Wind, by Russ Ramsey, Makoto Fujimura
+slug: Rembrandt is in the Wind
 tags:
   - book
 date: 2022-05-21T07:26:20.868Z
