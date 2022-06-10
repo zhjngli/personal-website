@@ -181,7 +181,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     // in the directory name is useful for sorting and looking through posts. There's not a great way
     // to keep the date in only one place and avoid errors, aside from using a generating script, but
     // that doesn't seem worthwhile.
-    const slug = `/${fileNode.relativeDirectory.split('-').join('/')}/`;
+
+    // for example: 01-02-03-slug-post
+    // date slug  : 01/02/03
+    // title slug : slug-post
+    // final slug : 01/02/03/slug-post
+    const dashSepDirName = fileNode.relativeDirectory.split('-');
+    const dateSlug = dashSepDirName.slice(0, 3).join('/');
+    const titleSlug = dashSepDirName.slice(3).join('-');
+    const slug = `/${dateSlug}/${titleSlug}/`;
     // insert slug to both markdown and file node
     createNodeField({
       node: node,
